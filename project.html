@@ -1,0 +1,358 @@
+<html>
+
+<head>
+  <title>rebel hustlers</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="registrationform.html">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+  
+  <style>
+    .row {
+      display: flex;
+    }
+
+    .column {
+      flex: 33.33%;
+      padding: 5px;
+
+    }
+
+    .submit: {
+      margin: 80;
+      margin-top: 20;
+      background: black;
+      font-size: 80;
+      color: red;
+
+      /* Contact us section */
+      #contact-box form {
+        width: 80%;
+      }
+
+      /* Footer */
+
+      /* Utility classes */
+      .h-primary {
+        font-size: 26px;
+      }
+
+      .btn {
+        font-size: 13px;
+        padding: 4px 8px;
+      }
+
+      * Contact Section */ #contact {
+        position: relative;
+      }
+
+      #contact::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUZrvgooBuaYDKR_gAB_dKcXLv4H_-HQolw&usqp=CAU")
+      }
+
+      #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+      }
+
+      #contact-box input,
+      #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+      }
+
+      #contact-box form {
+        width: 40%;
+      }
+
+      #contact-box label {
+        font-size: 1.3rem;
+        font-family: 'Bree Serif', serif;
+
+      }
+
+
+      footer {
+        background: black;
+        color: white;
+        padding: 9px 20px;
+      }
+
+      /* Utility Classes */
+      .h-primary {
+        font-family: 'Bree Serif', serif;
+        font-size: 3.8rem;
+        padding: 12px;
+      }
+
+      .h-secondary {
+        font-family: 'Bree Serif', serif;
+        font-size: 2.3rem;
+        padding: 12px;
+      }
+
+      .btn {
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: brown;
+        color: white;
+        margin: 17px;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+    }
+
+    body {
+      background-image: url("data:image/jpeg;base64,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") background-repeat:no-repeat;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Social Media Icons -->
+
+  <a href="https://www.instagram.com/reel/CXa0DyFAuq9/?utm_source=ig_web_copy_lin" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram" width="42" height="42"
+      style="float:right"></a>
+
+
+  <a href="https://m.facebook.com/ChitkaraU/" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="42" height="42"
+      style="float:right"></a>
+
+
+  <a href="https://www.linkedin.com/school/chitkara-university" target="_blank" /a>
+    <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="Linkdin" width="42" height="42"
+      style="float:right"></a>
+
+
+  <a href="https://twitter.com/ChitkaraU?t=rUT-tH3NJPisbn8u0sN5kg&s=09" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/twitter.png" alt="Twitter" width="42" height="42"
+      style="float:right"></a>
+
+
+  <a href="https://youtube.com/c/chitkarauniversity" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="Youtube" width="42" height="42"
+      style="float:right"></a>
+
+
+
+
+  <!-- CHITKARA UNIVERSITY LOGO -->
+
+
+
+  <a href="https://www.chitkara.edu.in/" target="_blank"><img
+      src="data:image/png;base64,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"
+      alt="CHITKARA UNIVERSITY" border="0" align="left"></a>
+
+
+
+  <!-- First Header -->
+
+  <h1 style="font-family: inherit; font-size: 70px"> CHITKARA UNIVERSITY </h1>
+
+  <p id="h" style=" font-family: gill sans;"><b>CHITKARA UNIVERSITY- "THE BEST PLACE TO EXPLORE YOUR KNOWLEDGE AND
+      POTENTIAL <br>
+      It has been founded by Dr.ashok Chitkara and Dr.Madhu Chitkara<br>
+      Contact number: 9501105714 </b>
+    <hr>
+    </hr>
+
+  <h2 style="font-family: Times; font-variant: small-caps; text-align: center;font-size: 45px"> Academic Programmes
+  </h2>
+  <pre
+    style="text-align: center;font-style: italic; font-size: 25px; font-family: cursive;">   CHITKARA offers B.Tech., M.Tech., MBA, Hotel management BCA, MCA, Pharmacy , Nursing B.Ed , M.Ed, JOURNALISM and many more .</pre>
+  <br> <br>
+
+  <!-- Images potraying life at CHITKARA University -->
+
+  <div class="row">
+    <div class="column">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0OkBkk-6G3Yfxkho7BjqN79qIHATChPAaVQ&usqp=CAU"
+        alt="B.tech cse image" height="310">
+    </div>
+    <div class="column">
+      <img src="https://xcse.xub.edu.in/wp-content/uploads/2020/06/mtrch_dsa_pro.jpg" alt="MBA image" height="310">
+    </div>
+    <div class="column">
+      <img src="https://xcse.xub.edu.in/wp-content/uploads/2020/06/phd_full_time.jpg" alt=" M-Tech image" height="310">
+    </div>
+  </div>
+  <br><br><br>
+
+  <pre
+    style="font-family: Times;font-size: 30px">           <u><b>B.Tech. CSE</b></u>                                                        <u><b>M. Tech. DSA</b></u>                                                      <u><b> MBA </b></u> </pre>
+  <br><br><br>
+
+
+  <section id="client-section">
+    <h1 class="h-primary center"><i>Our  top Collaborators</i></h1>
+    <div id="clients">
+        <div class="client-item">
+            <img src="img/logo1.jpg" alt="Our Client">
+        </div>
+        <div class="client-item">
+            <img src="img/logo2.jpg" alt="Our Client">
+        </div>
+      
+        <div class="client-item">
+            <img src="img/logo4.jpg" alt="Our Client">
+        </div>
+        <div class="client-item">
+            <img src="img/logo3.png" alt="Our Client">
+        </div>
+    </div>
+
+</section>
+
+
+
+  <!-- Video's Displaying Life at CHITKARA  University -->
+
+  <p style="font-family: Times;text-align: center;font-size: 44px;font-variant: small-caps;"><b><u>Featured
+        Videos</b></u></p>
+  <p style="font-family: sans-serif; text-align: center;font-size: 30px">A collection of videos showcasing life at
+    CHITKARA UNIVERSITY
+    and its prestigious position an academic arena.</p>
+  <br><br><br>
+
+  <iframe width="100%" height="60%" src="https://www.youtube.com/embed/Jp7qicX0qIE" title="YouTube video player"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen loop></iframe>
+
+  <div id="respond">
+    <div class="leave">
+    <h1> <i style="margin: 0 0 20 550; background: rgb(183 128 128 / 20%);">Leave a Comment </i> </h1>
+    </div>
+
+    <form>
+      <div class="comment">
+      <div>
+        <label for="username"> Enter your name:</label>
+        <input type="text" id="username" required placeholder="rebel "> <br> <br>
+      </div>
+      <div>
+        <label for="message"> Enter your message :</label>
+        <textarea type="text" id="message" required placeholder="comment about chitkara" height="30"
+          width="50"> </textarea> <br> <br>
+      </div>
+      <div class="submit">
+        <button type="text" style="color:red"> SUBMIT COMMENT </button>
+        <section id="contact">
+          </section>
+        </div>
+        </div>
+
+        <section id="contact">
+          <h1 class="h-primary center">Contact Us</h1>
+          <div id="contact-box">
+              <form action="">
+                  <div class="form-group">
+                      <label for="name">Name: </label>
+                      <input type="text" name="name" id="name" placeholder="Enter your name">
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email: </label>
+                      <input type="email" name="name" id="email" placeholder="Enter your email">
+                  </div>
+                  <div class="form-group">
+                      <label for="phone">Phone Number: </label>
+                      <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Message: </label>
+                      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                      <button class="rss"> submit </button>
+                  </div>
+              </form>
+          </div>
+      </section>
+
+      <div> <i> <a href="registrationform.html"> Click here for registration</a></i></div>
+
+
+      
+
+        <footer class="footer-distributed">
+          <div class="footer-left">
+              <img src="logo.jpg">
+            <h3>About<span><i> CHITKARA</i></span></h3>
+    
+            <p class="footer-links">
+              <a href="#">Home</a>
+              |
+              <a href="#">Blog</a>
+              |
+              <a href="#">About</a>
+              |
+              <a href="#">Contact</a>
+            </p>
+    
+            <p class="footer-company-name">© 2022 Chitkara Learning platform Pvt. Ltd.</p>
+          </div>
+    
+          <div class="footer-center">
+            <div>
+              <i class="fa fa-map-marker"></i>
+                <p><span>309 - Campus Rajpura,
+                 Patiala National highway, NH-64</span>
+                jansla rajpura, chandigarh Punjab - 140401</p>
+            </div>
+    
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+91 22-27782183</p>
+            </div>
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="https://www.chitkara.edu.in/admissions/admission-helpline/">careers@chitkara.edu.in (all contact)</a></p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <p class="footer-company-about">
+              <span>About the collage</span>
+              We offer skillfull learning and  courses across Technology, Design, Management, Science and Humanities.</p>
+            <div class="footer-icons">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+          </div>
+        </footer>
+      </body>
+    </html>
+
+     
+      </div>
+
+
+    </form>
+
+  </div>
+  </video>
+</body>
+
+</html>
